@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import processing.core.*;
 
 public class App extends PApplet {
     int scene = 0;
     Player guy;
-
+    Enemy enemy;
+    ArrayList<Enemy> firstRow;
 
     public static void main(String[] args) {
         PApplet.main("App");
@@ -11,7 +13,9 @@ public class App extends PApplet {
 
     public void setup() {
         guy = new Player(this);
-
+        firstRow = new ArrayList<>();
+        
+        }
     }
 
     public void settings() {
@@ -21,12 +25,18 @@ public class App extends PApplet {
     public void draw() {
         background(0);
         guy.display();
+        
 
     }
-    public void keyPressed(){
-      if(key == LEFT){
-       guy.moveLeft();
-      }
+
+    public void keyPressed() {
+
+        if (keyCode == LEFT) {
+            guy.moveLeft();
+        }
+        if (keyCode == RIGHT) {
+            guy.moveRight();
+        }
     }
 
 }

@@ -6,6 +6,7 @@ public class Player {
     private int height;
     private int width;
     private PApplet screen;
+    private int speed;
    
 
     public Player(PApplet c){
@@ -13,7 +14,7 @@ public class Player {
         this.y = 550;
         this.height = 25;
         this.width = 60;
-        int speed = 10;
+        this.speed = 10;
         screen = c;
 
 
@@ -23,9 +24,10 @@ public class Player {
        screen.rect(x, y , width, height);
     }
     public void moveLeft(){
-        x = x - speed;
+        x -= speed;
     }
     public void moveRight(){
-        x = x + speed;
+        x += speed; 
+        
     }
 }
