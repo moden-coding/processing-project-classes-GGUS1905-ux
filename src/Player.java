@@ -14,7 +14,7 @@ public class Player {
         this.y = 550;
         this.height = 25;
         this.width = 60;
-        this.speed = 10;
+        this.speed = 20;
         screen = c;
 
 
