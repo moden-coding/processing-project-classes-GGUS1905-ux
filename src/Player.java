@@ -28,6 +28,8 @@ public class Player {
     }
     public void moveRight(){
         x += speed; 
-        
+    }
+    public void shoot(){
+    
     }
 }

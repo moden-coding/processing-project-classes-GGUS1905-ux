@@ -23,8 +23,8 @@ public class Enemy {
         x += speed;
         if (x + size / 2 > screen.width || x - size / 2 < 0) {
             speed = -speed;
-            x += direction;
-
+            y += 60;
+           
         }
     }
     public void createEnemy(){
@@ -34,6 +34,9 @@ public class Enemy {
     }
     public int getX(){
         return x;
+    }
+     public int getY(){
+        return y;
     }
 
 }
