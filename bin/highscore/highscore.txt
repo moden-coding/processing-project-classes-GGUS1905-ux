@@ -1,5 +1,5 @@
 package highscore;
 
-public class txt {
+public class txt { //storing the highscore
 int 0;
 }
