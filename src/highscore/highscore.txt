@@ -1,0 +1,5 @@
+package highscore;
+
+public class txt { //storing the highscore
+int 0;
+}

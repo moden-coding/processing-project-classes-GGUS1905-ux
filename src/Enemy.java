@@ -7,7 +7,7 @@ public class Enemy {
     private int speed;
     private int size;
 
-    public Enemy(PApplet b , int x , int y){
+    public Enemy(PApplet b , int x , int y){ //my constructre
         screen = b;
         this.x = x;
         this.y = y;
@@ -15,11 +15,11 @@ public class Enemy {
         this.speed = 1;
     }
 
-     public void display(){
+     public void display(){ //displaying the enemy 
        screen.fill(255);
        screen.ellipse(x, y , size, size);
     }
-        public void move(int direction) {
+        public void move(int direction) {//moving enemy by the speed and if the enemy touches the end of the screen he changes direction and his y is gewtting lower
         x += speed;
         if (x + size / 2 > screen.width || x - size / 2 < 0) {
             speed = -speed;
@@ -27,15 +27,15 @@ public class Enemy {
            
         }
     }
-    public void createEnemy(){
+    public void createEnemy(){ //creating an enemy
         screen.fill(255);
         screen.ellipse(x, y , size, size);
         
     }
-    public int getX(){
+    public int getX(){//geting the x position of the enemy
         return x;
     }
-     public int getY(){
+     public int getY(){//geting the y position of the enemy
         return y;
     }
 
